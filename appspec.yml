@@ -1,20 +1,25 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /index.html
     destination: /var/www/topdust
+  - source: /test/test.html
+    destination: /var/www/topdust/test
+  - source: /new/new.html
+    destination: /var/www/topdust/new
 permissions:
+  - object: /index.html
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
   - object: /var/www/topdust
     pattern: "**"
+    except: [index.txt]
     owner: ubuntu
     group: ubuntu
     mode: 644
     type:
       - file
-  - object: /var/www/topdust
-    pattern: "**"
-    owner: ubuntu
-    group: ubuntu
-    mode: 755
-    type:
-      - directory
