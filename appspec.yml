@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/topdust
+permissions:
+  - object: /var/www/topdust
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 644
+    type:
+      - file
