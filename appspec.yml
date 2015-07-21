@@ -6,8 +6,15 @@ files:
 permissions:
   - object: /var/www/topdust
     pattern: "**"
-    owner: root
-    group: root
-    mode: 755
+    owner: ubuntu
+    group: ubuntu
+    mode: 644
     type:
       - file
+  - object: /var/www/topdust
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - folder
