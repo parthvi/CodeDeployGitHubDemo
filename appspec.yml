@@ -17,4 +17,4 @@ permissions:
     group: ubuntu
     mode: 755
     type:
-      - folder
+      - directory
