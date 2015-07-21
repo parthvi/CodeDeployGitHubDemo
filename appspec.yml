@@ -1,10 +1,8 @@
-version: 0.0
+version: 0.1
 os: linux
 files:
-  - source: /index.html
+  - source: /
     destination: /var/www/topdust    
-  - source: /new/new.html
-    destination: /var/www/topdust/new
 permissions:
   - object: /var/www/topdust
     pattern: "**"    
