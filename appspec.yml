@@ -3,21 +3,16 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/topdust
+  - source: /index1.html
+    destination: /var/www/topdust
   - source: /test/test.html
     destination: /var/www/topdust/test
-  - source: /new/new.html
+  - source: /new
     destination: /var/www/topdust/new
 permissions:
-  - object: /index.html
-    pattern: "**"
-    owner: root
-    group: root
-    mode: 755
-    type:
-      - file
   - object: /var/www/topdust
     pattern: "**"
-    except: [index.txt]
+    except: [index.html]
     owner: ubuntu
     group: ubuntu
     mode: 644
