@@ -21,4 +21,5 @@ permissions:
 hooks:    
     AfterInstall:
     - location: scripts/movetos3.sh
-      runas: root
+      timeout: 180
+      runas: ubuntu
